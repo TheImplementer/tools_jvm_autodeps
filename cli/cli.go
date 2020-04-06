@@ -26,7 +26,7 @@ import (
 
 	"context"
 	"github.com/bazelbuild/tools_jvm_autodeps/bazel"
-	"github.com/bazelbuild/tools_jvm_autodeps/buildozer"
+	// "github.com/bazelbuild/tools_jvm_autodeps/buildozer"
 	"github.com/bazelbuild/tools_jvm_autodeps/color"
 	"github.com/bazelbuild/tools_jvm_autodeps/future"
 	"github.com/bazelbuild/tools_jvm_autodeps/jadeplib"
@@ -114,7 +114,7 @@ func RulesToFix(ctx context.Context, config jadeplib.Config, relWorkingDir, arg 
 
 	// No rules consumes file name - create one,
 	newRule := jadeplib.CreateRule(fileName, namingRules, defaultRuleKind)
-	err = buildozer.NewRule(config.WorkspaceDir, newRule)
+	// err = buildozer.NewRule(config.WorkspaceDir, newRule)
 	if err != nil {
 		return nil, err
 	}

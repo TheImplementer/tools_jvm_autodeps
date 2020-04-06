@@ -29,8 +29,8 @@ import (
 
 	"github.com/bazelbuild/tools_jvm_autodeps/bazeldepsresolver"
 	"github.com/bazelbuild/tools_jvm_autodeps/cli"
-	"github.com/bazelbuild/tools_jvm_autodeps/filter"
-	"github.com/bazelbuild/tools_jvm_autodeps/grpcloader"
+	// "github.com/bazelbuild/tools_jvm_autodeps/filter"
+	// "github.com/bazelbuild/tools_jvm_autodeps/grpcloader"
 	"github.com/bazelbuild/tools_jvm_autodeps/jadeplib"
 	"github.com/bazelbuild/tools_jvm_autodeps/jadepmain"
 	"github.com/bazelbuild/tools_jvm_autodeps/pkgloading"
@@ -146,7 +146,8 @@ func (c customization) NewResolvers(loader pkgloading.Loader, data interface{}) 
 }
 
 func (c customization) NewLoader(ctx context.Context, flags *jadepmain.Flags, workspaceDir string) (pkgloading.Loader, func(), error) {
-	return grpcloader.Connect(ctx, flags.PkgLoaderExecutable, flags.PkgLoaderAddress, flags.RPCDeadline, workspaceDir, c.bazelInstallBase, c.bazelOutputBase, keys(filter.RuleKindsToLoad))
+	return nil, nil, nil
+// 	return grpcloader.Connect(ctx, flags.PkgLoaderExecutable, flags.PkgLoaderAddress, flags.RPCDeadline, workspaceDir, c.bazelInstallBase, c.bazelOutputBase, keys(filter.RuleKindsToLoad))
 }
 
 func keys(m map[string]bool) []string {

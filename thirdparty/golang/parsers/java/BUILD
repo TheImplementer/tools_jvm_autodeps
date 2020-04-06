@@ -3,7 +3,11 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 java_binary(
     name = "textmapper_tool",
     main_class = "org.textmapper.tool.Tool",
-    runtime_deps = ["//thirdparty/jvm/org/textmapper"],
+    runtime_deps = [
+        "@maven//:org_textmapper_lapg",
+        "@maven//:org_textmapper_templates",
+        "@maven//:org_textmapper_textmapper",
+    ],
 )
 
 genrule(

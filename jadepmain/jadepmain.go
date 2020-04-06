@@ -27,7 +27,7 @@ import (
 
 	"context"
 	"github.com/bazelbuild/tools_jvm_autodeps/bazel"
-	"github.com/bazelbuild/tools_jvm_autodeps/buildozer"
+	// "github.com/bazelbuild/tools_jvm_autodeps/buildozer"
 	"github.com/bazelbuild/tools_jvm_autodeps/cli"
 	"github.com/bazelbuild/tools_jvm_autodeps/color"
 	"github.com/bazelbuild/tools_jvm_autodeps/dictresolver"
@@ -100,7 +100,7 @@ func Main(custom Customization, flags *Flags, args []string) {
 				log.Printf("WARNING: Error asking user to choose dependencies to add:\n%v", err)
 				continue
 			}
-			err = buildozer.AddDepsToRules(config.WorkspaceDir, depsToAdd)
+			// err = buildozer.AddDepsToRules(config.WorkspaceDir, depsToAdd)
 			if err != nil {
 				log.Printf("WARNING: error adding missing deps to rules:\n%v", err)
 				continue

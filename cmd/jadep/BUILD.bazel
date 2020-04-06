@@ -9,7 +9,7 @@ go_library(
         "//bazeldepsresolver:go_default_library",
         "//cli:go_default_library",
         "//filter:go_default_library",
-        "//grpcloader:go_default_library",
+        # "//grpcloader:go_default_library",
         "//jadeplib:go_default_library",
         "//jadepmain:go_default_library",
         "//pkgloading:go_default_library",

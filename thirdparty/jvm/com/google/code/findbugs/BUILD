@@ -1,11 +1,9 @@
 java_library(
     name = "jsr305",
-    exports = [
-        "//external:jar/com/google/code/findbugs/jsr305"
-    ],
     visibility = [
-        "//visibility:public"
-    ]
+        "//visibility:public",
+    ],
+    exports = [
+        "@maven//:com_google_code_findbugs_jsr305",
+    ],
 )
-
-

@@ -7,7 +7,7 @@ go_library(
     visibility = ["//visibility:public"],
     deps = [
         "//bazel:go_default_library",
-        "//buildozer:go_default_library",
+        # "//buildozer:go_default_library",
         "//color:go_default_library",
         "//future:go_default_library",
         "//jadeplib:go_default_library",
